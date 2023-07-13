@@ -50,7 +50,7 @@ function initMap() {
         ["Wind Tunnel Lab",28.75276164138976, 77.11797643166786,"/svg/wind-tunnel-lab.svg",38,31],
         ["Admin Block",28.750080070535372, 77.1161699117548,"/svg/admin-block.svg",38,31],
         ["Amul",28.74948508765539, 77.11842567207576,"/svg/amul.svg",38,31],
-        ["Canteen",28.749325866313274, 77.1187602128004,"/svg/canteen.svg",38,31],
+        ["Mechanical Canteen",28.749325866313274, 77.1187602128004,"/svg/canteen.svg",38,31],
         ["OAT",28.749837049760856, 77.11769924078797,"/svg/oat.svg",38,31],
         ["Mini OAT",28.74996275022534, 77.11669561861406,"/svg/minioat.svg",38,31],
         ["Main Gate",28.745167040271337, 77.11697279233329,"/svg/entry-gate.svg",38,31],
@@ -94,7 +94,16 @@ function initMap() {
         marker.addListener("click",()=>{
             infowindow.open(map,marker);
             });
+        marker.addListener('mouseover', function() {
+              infowindow.open(map, this);
+          });
+          
+         marker.addListener('mouseout', function() {
+              infowindow.close();
+          });
     }
+        
+            
 
   }
   
