@@ -94,6 +94,13 @@ function initMap() {
         marker.addListener("click",()=>{
             infowindow.open(map,marker);
             });
+        marker.addListener('mouseover', function() {
+              infowindow.open(map, this);
+          });
+          
+        marker.addListener('mouseout', function() {
+              infowindow.close();
+          });
     }
 
   }
